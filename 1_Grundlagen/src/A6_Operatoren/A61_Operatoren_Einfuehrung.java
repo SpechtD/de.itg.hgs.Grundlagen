@@ -8,58 +8,88 @@ public class A61_Operatoren_Einfuehrung {
 
 	public static void main(final String[] args) {
 
-		// uebung 2:
+		// u1:
 		// Deklarieren Sie die Zahl 255 als Hexadezimalzahl
 		// und geben Sie diese aus
 		// Was stellen Sie fest?
-//         int hexadezimalZahl=0x0A;
-//         System.out.println("\nDie Hexadezimalzahl:"+hexadezimalZahl);
-//         
-//         String hex = "0A";
-//         int hexZahl = Integer.parseInt(hex, 16);
-//         
+		// 1011`1100 = 0xBC = 11*16^1+10*16^0
+         int hexadezimalZahl=0x10BC; //BC ist ein Nibble belegt 1 Byte
+         System.out.println("\nDie Hexadezimalzahl:"+hexadezimalZahl);
 
-		// uebung 3:
+		//Zahlen aus Text         
+         String hex = "0A";
+         int hexZahl = Integer.parseInt(hex, 16); //Wrapperklasse -> Integer
+		 System.out.println("hexZahl = "+hexZahl);
+
+		 String strKommzahl1 = "2.9"; //Wrapperklasse -> Double
+		 double kommaZahl = Double.parseDouble(strKommzahl1);
+		 System.out.println("Kommazhl="+kommaZahl);
+
+		 
+      
+
+		// u2:
 		// Reihenfolge der Auswertung in Ausdruecken
 		// Welchen Wert hat b?
 		// Begruenden Sie das Ergebnis.
-//		int a = 5;int b=3;
-//		a++;
-//		b++;
-//
-//		 System.out.println("\nb: " +a);
-//		 System.out.println("\nb: " +b);
+		int a=5;
+		int b=3;
+		++a;   // a -> hat den Wert 6 (preinkrement) gleich wie a=a+1; a+=1
+		a=b++; //a hat den Wert von b = 3, dannach wird b erhöht (postinkrement)
+		System.out.println("\na: " +a);
+		System.out.println("b: " +b);
 
-		// uebung 4:
+		// u3
 		// Welchen Wert hat z4? Begruenden Sie Ihr ergebnis.
-//         int a4=13;     //1101
-//         int b4=3;      //0011 
-//         int z4 = a4&b4;//0001
-//         System.out.println("\nz4 "+z4);
+         int a4=13;     //1101
+         int b4=11;     //1011 
+         int z4 = a4&b4;//1001
+         System.out.println("\nz4 "+z4);
 
-		// uebung 5:
-		// Welchen Wert hat z5? Begruenden Sie Ihr ergebnis.
-//         int a5=11;  //1011
-//         int b5=9;   //1001
-//         int z5;     //1011 
-//         
-//         z5=a5|b5;
-//         System.out.println("\nz5 "+z5);
 
-		// uebung 6:
+
+
+
+
+
+
+
+
+
+		// u4:
+		// Welchen Wert hat z5? Begruenden Sie Ihr Ergebnis.
+         int a5=11;  //1011
+         int b5=9;   //1001
+         int z5;     //1011  
+         
+         z5=a5|b5; //binäres ODER
+         System.out.println("\nz5 "+z5);
+
+
+
+
+
+
+
+
+		// u5:
 		// Welche Ergebnisse ergeben sich bei den Pruefsummen 1-4?
 
-//         boolean pruefSumme1,pruefSumme2,pruefSumme3,pruefSumme4;
-//         int a6 = 9;
-//         int b6 = 99;
-//         pruefSumme1 = a6<10 && b6>10;
-//         pruefSumme2 = a6<10 || b6>10;
-//         pruefSumme3 = a6<10 && b6<10;
-//         pruefSumme4 = a6<10 && b6<10;
-//         System.out.println("\npruefSumme1 "+pruefSumme1);
-//         System.out.println("pruefSumme2 "+pruefSumme2);
-//         System.out.println("pruefSumme3 "+pruefSumme3);
-//         System.out.println("pruefSumme4 "+pruefSumme4);
+         boolean pruefSumme1,pruefSumme2,pruefSumme3,pruefSumme4;
+         int a6 = 9;
+         int b6 = 99;
+         pruefSumme1 = a6!=10 && b6>10; //logisches UND
+         pruefSumme2 = a6<10 || b6>10;  //logisches ODER
+         pruefSumme3 = a6<10 && b6<10;
+         pruefSumme4 = a6<10 || b6<10;
+         System.out.println("\npruefSumme1 "+pruefSumme1);
+         System.out.println("pruefSumme2 "+pruefSumme2);
+         System.out.println("pruefSumme3 "+pruefSumme3);
+         System.out.println("pruefSumme4 "+pruefSumme4);
+         
+         
+		 
+
 //         
 
 		// uebung 7:
@@ -91,11 +121,11 @@ public class A61_Operatoren_Einfuehrung {
 		// aus einem Bogenmass
 
 //         //UeBUNG 9
-		int zahl = 15238;
-		int komplement = ~15238 + 1;
+		//int zahl = 15238;
+		//int komplement = ~15238 + 1;
 
-		System.out.println(zahl);
-		System.out.println(komplement);
+		//System.out.println(zahl);
+		//System.out.println(komplement);
 
-	}
-}
+	}//ende main
+}//ende class
